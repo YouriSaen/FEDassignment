@@ -63,14 +63,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   #### Screenreader
   Hier korte omschrijving (met indien nodig afbeeldingen)
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)!
+
 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  
+  Er zijn geen duidelijke highlights als je tab klikt op de homepagine, het mist bij plaatjes en knopjes. Als je een andere pagina bezoekt zoals Clothing
+  of product dan zie je het wel duidelijk bij al het content.
+  
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Een duidelijke border toevoegen aan plaatjes en titels van producten.
 
   #### Motoriek (shocks, elastiekjes)
   Hier korte omschrijving (met indien nodig afbeeldingen)
@@ -79,7 +83,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  
+  Visueel is de website nog goed te doen gezien dat de achtergrond wit of zwart is (gebasseerd op jouw instellingen). Zelfs de highlighted knoppen kunnen   nog goed gezien worden.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
