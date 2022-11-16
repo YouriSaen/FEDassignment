@@ -61,32 +61,32 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen:
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)!
+  LTTStore is goed te gebruiken, alles is duidelijk geprogrammeerd zodat de 
+  screenreader alles kan lezen en er snel door heen kan gaan. er is zelfs   
+  een knop om het begin te skippen.
 
 
 
   #### Muis en Toetsenbord 
   
-  Er zijn geen duidelijke highlights als je tab klikt op de homepagine, het mist bij plaatjes en knopjes. Als je een andere pagina bezoekt zoals Clothing
-  of product dan zie je het wel duidelijk bij al het content.
-  
+  Er zijn geen duidelijke highlights als je tab klikt op de homepagine, het mist bij plaatjes en knopjes. Als je een andere pagina bezoekt zoals Clothing of product dan zie je het wel duidelijk bij al het content.
+  <img src="readme-images/lttstore_review_highlight.jpg" width="375px" alt="Good highlights of LTTStore">
+  <img src="readme-images/lttstore_highlight_picture.jpg" width="375px" alt="Bad highlights of LTTStore">
+
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
   Een duidelijke border toevoegen aan plaatjes en titels van producten.
 
   #### Motoriek (shocks, elastiekjes)
   Hier korte omschrijving (met indien nodig afbeeldingen)
-
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Het gebruiken van de shocker is voor mij helemaal niet te gebruiken. Daarmee zou ik geen computers mee kunnen bedienen.
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
   
-  Visueel is de website nog goed te doen gezien dat de achtergrond wit of zwart is (gebasseerd op jouw instellingen). Zelfs de highlighted knoppen kunnen   nog goed gezien worden.
+  Visueel is de website nog goed te doen gezien dat de achtergrond wit of zwart is (gebasseerd op jouw instellingen). Zelfs de highlighted knoppen kunnen nog goed gezien worden.
 
-  Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  De website is goed te gebruiken met verschillende visuele beperkingen. Maar het is te gebruiken.
 
 </details>
 
