@@ -20,6 +20,7 @@ button, summary {
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
+	--font-body-family: Poppins, sans-serif;
 }
 
 
@@ -27,8 +28,47 @@ button, summary {
 
 
 /****************/
-/* JOUW STYLING */
+/* KLEIN SCHERM */
 /****************/
 
-/* jouw code */
+
+header{
+	display: grid;
+	grid-template-columns: 1fr 1em 5em 1em 1fr;
+}
+
+header > nav > img{
+	width: 1.5em;
+	height: 1.5em;
+	
+}
+
+header > nav{
+	grid-column: 5;
+	justify-self: center;
+	align-self: center;
+}
+	
+
+
+header > img:first-of-type{
+	grid-column: 1;
+	width: 2em;
+	height: 2em;
+	
+}
+
+header > img:last-of-type{
+	grid-column: 3;
+	object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+/* header > h2{
+	font-family: var(--font-body-family);
+	justify-content: space-evenly;
+	align-items: baseline;
+	flex-flow: column wrap;
+} */
 
