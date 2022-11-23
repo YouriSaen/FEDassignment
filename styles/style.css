@@ -9,6 +9,9 @@ button, summary {
 	cursor: pointer;
 }
 
+body{
+	margin: 0;
+}
 
 
 
@@ -21,6 +24,7 @@ button, summary {
 	--color-text:#111;
 	--color-background:#eee;
 	--font-body-family: Poppins, sans-serif;
+	--gradient-background: linear-gradient(90deg, rgba(227,29,132,1) 0%, rgba(252,121,0,1) 100%);
 }
 
 
@@ -34,37 +38,77 @@ button, summary {
 
 header{
 	display: grid;
-	grid-template-columns: 1fr 1em 5em 1em 1fr;
+	grid-template-columns: 1fr max-content 1fr;
+	column-gap: .25em;
 }
 
-header > nav > img{
-	width: 1.5em;
-	height: 1.5em;
-	
-}
+/* Icons */
+header > nav > ul{
+	/* als kind */
+	justify-self: end;
+	right: 1em;
 
-header > nav{
-	grid-column: 5;
-	justify-self: center;
+	/* als parent */
+	display: flex;
 	align-self: center;
-}
+	gap: 1.5em;
 	
+}
+
+li{
+	list-style: none;
+}
+
+header > nav > ul > li > img{
+	width: 1.2em;
+	height: 1.2em;
+}
 
 
-header > img:first-of-type{
-	grid-column: 1;
+	
+/* logo */
+header > a {
+	grid-column-start: 2;
+}
+
+header > a img {
+	width: 3em;
+	height: 3em;
+}
+
+/* hamburger */
+header > button {
+	grid-column-start: 1;
+	grid-row-start: 2;
+	justify-self: start;
+	padding: 0;
+	border: none;
+	background: none;
+}
+header > button img {
 	width: 2em;
 	height: 2em;
-	
+	margin: 1em;
 }
 
-header > img:last-of-type{
-	grid-column: 3;
-	object-fit: cover;
-  width: 100%;
-  max-height: 100%;
+/*warning text*/
+section {
+	text-align: center;
+	background: var(--gradient-background);
+	position: absolute;
 }
 
+header section p{
+	margin: auto;
+	font-family: var(--font-body-family);
+	color: white;
+	letter-spacing: .1rem;
+	font-weight: 600;
+	font-size: .75em;
+	margin: 1em;
+	grid-row-start: 1;
+	height: 100%;
+}
 /* header > h2{
 	font-family: var(--font-body-family);
 	justify-content: space-evenly;
