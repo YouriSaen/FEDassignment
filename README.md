@@ -126,22 +126,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="images/readme-images/css_code.jpg" alt="A part of my CSS code">
 
   ### Agenda voor meeting
-  samen met je groepje opstellen
+  samen met je groepje opstellen:
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Youri Langenberg:
+  Op dit moment wil ik weten hoe ik het beste de header kan positioneren zodat het onder de gradient staat
+
+  Laura Wilting:
+  Ik wil weten waar ik het beste mee kan beginnen in mijn CSS.
+  
+  Pepijn de Wolff:
+  Ik wil weten of mn html semantisch genoeg is
 
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  We kunnen elkaar lastig op weg helpen via deze manier en willen daarom graag morgen in de les
+  om hulp vragen aan de docent en/of de student assistenten.
 
 </details>
 
