@@ -40,6 +40,7 @@ header{
 	display: grid;
 	grid-template-columns: 1fr max-content 1fr;
 	column-gap: .25em;
+	row-gap: .75em;
 }
 
 /* Icons */
@@ -55,6 +56,10 @@ header > nav > ul{
 	
 }
 
+header > nav{
+	grid-row-start: 2;
+}
+
 li{
 	list-style: none;
 }
@@ -68,6 +73,7 @@ header > nav > ul > li > img{
 	
 /* logo */
 header > a {
+	grid-row-start: 2;
 	grid-column-start: 2;
 }
 
@@ -92,22 +98,23 @@ header > button img {
 }
 
 /*warning text*/
-section {
-	text-align: center;
-	background: var(--gradient-background);
-	position: absolute;
+header section {
+	grid-row-start: 1;
+	grid-column-end: -1;
+	grid-column-start: 1;
 }
 
 header section p{
-	margin: auto;
+	text-align: center;
 	font-family: var(--font-body-family);
+	background: var(--gradient-background);
 	color: white;
 	letter-spacing: .1rem;
 	font-weight: 600;
 	font-size: .75em;
-	margin: 1em;
-	grid-row-start: 1;
-	height: 100%;
+	padding: 1em;
+	margin: 0;
+	text-transform: uppercase;
 }
 /* header > h2{
 	font-family: var(--font-body-family);

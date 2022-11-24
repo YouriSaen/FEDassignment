@@ -142,6 +142,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier na afloop snel de uitkomsten van de meeting vastleggen
   We kunnen elkaar lastig op weg helpen via deze manier en willen daarom graag morgen in de les
   om hulp vragen aan de docent en/of de student assistenten.
+  Niet schreeuwen (Uppercase)
+  Taal naar engels zetten anders is het niet goed voor Google (SEO)
+  3 style sheets
+    - Algemeen (fonts, footer, header)
+    - Homepage
+    - Product page
+  
 
 </details>
 
