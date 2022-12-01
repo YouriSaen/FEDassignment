@@ -14,32 +14,95 @@
 
 <body>
 	<header>
-		<a href="">
-			<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips" href="index.html">
-		</a>
+		<div>
+			<a href="">
+				<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips" href="index.html">
+			</a>
+			
+			<!-- Hamburger menu -->
+			<button>
+				<img src="images/icons/bars-solid.svg">
+			</button>
+			
+			<!-- Icons nav -->
+			<nav>
+				<ul>
+					<li><img src="images/icons/sun-regular.svg"></li>
+					<li><img src="images/icons/magnifying-glass-solid.svg"></li>
+					<li><img src="images/icons/cart-shopping-solid.svg"></li>
+				</ul>
+			</nav>
+
+			<!-- Warning Text -->
+			<section>
+				<p>
+					Due to an extremely high volume of requests, replies from our customer service may be delayed. 
+					We appreciate your patience
+				</p>
+			</section>
+		</div>
+
+		<ul>
+			<li>Home</li>
+			<li>Gear</li>
+			<li>Clothing</li>
+			<li>All Products</li>
+		</ul>
 		
-		<!-- Hamburger menu -->
-		<button>
-			<img src="images/icons/bars-solid.svg">
-		</button>
-		
-		<!-- Icons nav -->
-		<nav>
-			<ul>
-				<li><img src="images/icons/sun-regular.svg"></li>
-				<li><img src="images/icons/magnifying-glass-solid.svg"></li>
-				<li><img src="images/icons/cart-shopping-solid.svg"></li>
-			</ul>
-		</nav>
-		
-		<!-- Warning Text -->
-		<section>
-			<p>
-				Due to an extremely high volume of requests, replies from our customer service may be delayed. 
-				We appreciate your patience
-			</p>
-		</section>
 	</header>
+
+	<main>
+		  
+		<!-- Carrousel #1 -->
+		  <section id="bannerCaro" class="caroCarrouselBolletjes" aria-label="Voorbeeld met alleen bolletjes" tabIndex="-1">
+			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
+			<ul>
+			  <li id="banner1"><img src="images/banners/Black_Friday_Banner_Nov_27_Shortcircuit_Sweatpants_Hoodie_Mobile_750x.webp" alt="Shortcircuit Sweatpants Black Friday Deal" /></li>
+			  <li id="banner2"><img src="images/banners/LTT_New_Water_Bottle_Colours_Banner_Mobile_750x.webp" alt="New Water Bottle Colors" /></li>
+			  <li id="banner3"><img src="images/banners/lttstore_Color_block_Hoodies_Banner-Mobile_750x.webp" alt="Color block hoodies" /></li>
+			</ul>
+			
+			<nav>
+			  <ul>
+				<li><a href="#banner1" aria-label="go to element1"></a></li>
+				<li><a href="#banner2" aria-label="go to element2"></a></li>
+				<li><a href="#banner3" aria-label="go to element3"></a></li>
+			  </ul>
+			</nav>
+		  </section>
+
+		  <!-- Carrousel #2 -->
+		  <section id="productCaro" class="caroCarrouselButtons" aria-label="Voorbeeld met één en een beetje" tabIndex="-1">
+			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
+			<ul>
+			  <li id="product1"><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" /></li>
+			  <li id="product2"><img src="images/ltt_products/lttstore_LTTColourblockHoodie_TransparencyFile.webp" alt="Colour block hoodie" /></li>
+			  <li id="product3"><img src="images/ltt_products/lttstore_Beanies_TransparencyFile.webp" alt="Beanie" /></li>
+			</ul>
+
+			<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+			<p>1 / 3</p>
+  			<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+		  </section>
+
+		  <h2>Best sellers</h2>
+		  <!-- Carrousel #3 -->
+		  <section id="bestsellerCaro" class="caroCarrouselButtons" aria-label="Voorbeeld met één en een beetje" tabIndex="-1">
+			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
+			<ul>
+			  <li id="bestseller1"><img src="images/ltt_products/Lttstore_NorthernLightsDeskPad_TransparencyFile.webp" alt="Retro Polus Fleece" /></li>
+			  <li id="bestseller2"><img src="images/ltt_products/LTTScrewDriver-Transparent.webp" alt="Colour block hoodie" /></li>
+			  <li id="bestseller3"><img src="images/ltt_products/StandardBitSet_lttstoreImage-01_1.webp" alt="Beanie" /></li>
+			  <li id="bestseller4"><img src="images/ltt_products/lttstore_NewBottleColours_TransparencyFile_02.webp" alt="Water Bottle Colours" /></li>
+			  <li id="bestseller5"><img src="images/ltt_products/lttstore_Backpack_TransparencyFile.webp" alt="LTT Backpack" /></li>
+			  <li id="bestseller6"><img src="images/ltt_products/Lttstore_WaterBottleSpoutLid_TrasparentFiles.webp" alt="Water bottle spout lid" /></li>
+			</ul>
+
+			<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+			<p>1 / 3</p>
+  			<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+		  </section>
+	</main>
 
 	<script defer src="scripts/script.js"></script>
 </body>

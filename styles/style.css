@@ -10,21 +10,30 @@ button, summary {
 }
 
 body{
+	/* Carrousel code */
+	grid-template-columns: minmax(auto, var(--maxWidth));
+	  justify-content:center;
+
 	margin: 0;
 }
 
-
+li{
+	list-style: none;
+}
 
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
+	/* Carrousel code */
+	--maxWidth:32rem;
 	/* startje */
 	--color-text:#111;
 	--color-background:#eee;
 	--font-body-family: Poppins, sans-serif;
 	--gradient-background: linear-gradient(90deg, rgba(227,29,132,1) 0%, rgba(252,121,0,1) 100%);
+	--text-color-white:#fff;
 }
 
 
@@ -37,14 +46,23 @@ body{
 
 
 header{
+	
+
+}
+
+header div {
 	display: grid;
 	grid-template-columns: 1fr max-content 1fr;
 	column-gap: .25em;
-	row-gap: .75em;
+
+	background-color: white;
+
+	position: relative;
+	z-index: 200;
 }
 
 /* Icons */
-header > nav > ul{
+header div nav > ul{
 	/* als kind */
 	justify-self: end;
 	right: 1em;
@@ -56,15 +74,11 @@ header > nav > ul{
 	
 }
 
-header > nav{
+header div nav{
 	grid-row-start: 2;
 }
 
-li{
-	list-style: none;
-}
-
-header > nav > ul > li > img{
+header div nav > ul > li > img{
 	width: 1.2em;
 	height: 1.2em;
 }
@@ -72,18 +86,19 @@ header > nav > ul > li > img{
 
 	
 /* logo */
-header > a {
+header div > a {
+	padding-top: .5em;
 	grid-row-start: 2;
 	grid-column-start: 2;
 }
 
-header > a img {
+header div > a img {
 	width: 3em;
 	height: 3em;
 }
 
 /* hamburger */
-header > button {
+header div > button {
 	grid-column-start: 1;
 	grid-row-start: 2;
 	justify-self: start;
@@ -91,24 +106,28 @@ header > button {
 	border: none;
 	background: none;
 }
-header > button img {
+header div > button img {
 	width: 2em;
 	height: 2em;
 	margin: 1em;
 }
 
+
+
+
 /*warning text*/
-header section {
+header div section {
+
 	grid-row-start: 1;
 	grid-column-end: -1;
 	grid-column-start: 1;
 }
 
-header section p{
+header div section p{
 	text-align: center;
 	font-family: var(--font-body-family);
 	background: var(--gradient-background);
-	color: white;
+	color: var(--text-color-white);
 	letter-spacing: .1rem;
 	font-weight: 600;
 	font-size: .75em;
@@ -116,10 +135,334 @@ header section p{
 	margin: 0;
 	text-transform: uppercase;
 }
-/* header > h2{
-	font-family: var(--font-body-family);
-	justify-content: space-evenly;
-	align-items: baseline;
-	flex-flow: column wrap;
-} */
 
+
+
+/* dat dit hier staat is de schuld van Sanne */
+header > ul { 
+	margin: 0;
+	padding:1em;
+	list-style:none;
+
+	position: fixed;
+	inset: 0;
+	z-index: 100;
+	transform: translatex(-100%);
+
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content: center;
+  	text-align: center;
+  	gap:1em;
+
+  	background-color: aqua;
+
+  	transition: .2s;
+}
+
+header > ul li{
+	font-family: var(--font-body-family);
+	font-weight: bold;
+	letter-spacing: .1em;
+}
+
+.hamburgerToggle{
+	transform: translateX(0);
+}
+
+
+
+
+
+
+
+
+  /******************************/
+  /* DE CAROCARROUSEL CONTAINER */
+  /******************************/
+  
+  .caroCarrouselBolletjes {
+	  /* basis waarden die door de hele carrousel gebruikt worden */
+	  /* kun je zelf aanpassen */
+	  --caroCarrouselBolletjesMainColor:#fff;
+	--caroCarrouselBolletjesAccentColor:#1b75b3;
+	  --caroCarrouselBolletjesShadeColor:rgba(229,229,229,60);
+  
+	position: relative;
+	  outline:none;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+  }
+  
+  /* dark mode */
+  @media (prefers-color-scheme: dark) {
+	.caroCarrousel {
+	  --caroCarrouselBolletjesMainColor:#fff;
+	  --caroCarrouselBolletjesShadeColor:rgba(229,229,229,60);
+	}
+  }
+  
+  
+  /************************************/
+  /* de carrousel elementen container */
+  .caroCarrouselBolletjes > ul {
+	margin: 0; padding: 0;
+	list-style: none;
+	  display: flex;
+	  
+	  /* handmatig scrollen is mogelijk */
+	  overflow: hidden;
+	  
+	  /* snappen als er gescrolled wordt - andere helft bij li */
+	scroll-snap-type: inline mandatory;
+	
+	/* smooth scrollen */
+	  scroll-behavior: smooth;
+	
+	/* scrollbar zoveel mogelijk verbergen */
+	-webkit-overflow-scrolling: touch; /* voor iOS*/
+	-ms-overflow-style: none; /* voor IE */
+	  scrollbar-width: none; /* voor firefox */
+
+	  border-radius: 1em;
+	  max-width: 90%;
+	  align-self: center;
+  }
+  
+  .caroCarrouselBolletjes > ul::-webkit-scrollbar {
+	/* scrollbar zoveel mogelijk verbergen */
+	display: none; /* voor chrome, safari en edge*/
+  }
+  
+  
+  /**************************/
+  /* de carrousel elementen */
+  .caroCarrouselBolletjes > ul li {
+	flex-basis: 100%;
+	flex-shrink: 0;
+	/* snappen als er gescrolled wordt - andere helft bij ul */
+	  scroll-snap-align:center;
+  }
+  
+  
+  /**********************************/
+  /* de carrousel elementen content */
+  
+  /* de stijlen voor jouw content hier */
+  .caroCarrouselBolletjes > ul li > img {
+	display: block;
+	width: 100%;
+  }
+  
+  
+  /****************/
+  /* DE BOLLETJES */
+  /****************/
+  
+  /* de bolletjes container */
+  .caroCarrouselBolletjes nav ul {
+	position: absolute;
+	left:50%;
+	transform: translateX(-50%);
+	bottom: 0;
+	margin: 0;
+	padding: 0 0 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap:.3em;
+	border-radius: 1em;
+
+	align-items: center;
+	border: .2em solid white;
+	background-color: var(--caroCarrouselBolletjesShadeColor);
+  }
+  
+  /* een bolletje container */
+  .caroCarrouselBolletjes > nav li {
+	  flex-basis: 1.2em;
+	  aspect-ratio: 1/1;
+	  padding: .2em;
+	  bottom: .2em;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+  }
+  
+  /* de bolletjes */
+  .caroCarrouselBolletjes > nav a {
+	display: block;
+	width:.6em;
+	height:.6em;
+	text-decoration: none;
+	  color: var(--caroCarrouselBolletjesMainColor);
+	  border-radius: 50%;
+	outline: white;
+	  box-shadow: inset 0 0 0 2px currentColor;
+	
+	transition: 0.5s;
+  }
+  
+  .caroCarrouselBolletjes > nav a:hover,
+  .caroCarrouselBolletjes > nav a:focus {
+	color: var(--caroCarrouselBolletjesAccentColor);
+  }
+  
+  .caroCarrouselBolletjes > nav a.current {
+	background-color: currentColor;
+  }
+
+  
+
+
+
+
+
+
+
+  /* carrousel met buttons */
+
+  .caroCarrouselButtons {
+	/* basis waarden die door de hele carrousel gebruikt worden */
+	/* kun je zelf aanpassen */
+	--caroCarrouselButtonsMainColor:#333;
+  --caroCarrouselButtonsAccentColor:#1b75b3;
+	--caroCarrouselButtonsShadeColor:#ddd9;
+
+  position: relative;
+  overflow: hidden; /* om de linkbuttons te verbergen */
+	outline:none;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1em;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  .caroCarrouselButtons {
+    --caroCarrouselButtonsMainColor:#ccc;
+    --caroCarrouselButtonsShadeColor:#4449;
+  }
+}
+
+
+/************************************/
+/* de carrousel elementen container */
+.caroCarrouselButtons > ul {
+  margin: 0; padding: 0;
+  list-style: none;
+	display: flex;
+	
+	/* handmatig scrollen is mogelijk */
+	overflow: hidden;
+	
+	/* snappen als er gescrolled wordt - andere helft bij li */
+  scroll-snap-type: inline mandatory;
+  
+  /* smooth scrollen */
+	scroll-behavior: smooth;
+  
+  /* scrollbar zoveel mogelijk verbergen */
+  -webkit-overflow-scrolling: touch; /* voor iOS*/
+  -ms-overflow-style: none; /* voor IE */
+	scrollbar-width: none; /* voor firefox */
+}
+
+.caroCarrouselButtons > ul::-webkit-scrollbar {
+  /* scrollbar zoveel mogelijk verbergen */
+  display: none; /* voor chrome, safari en edge*/
+}
+
+
+/**************************/
+/* de carrousel elementen */
+.caroCarrouselButtons > ul li {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  /* snappen als er gescrolled wordt - andere helft bij ul */
+	scroll-snap-align:center;
+}
+
+
+/**********************************/
+/* de carrousel elementen content */
+
+/* de stijlen voor jouw content hier */
+.caroCarrouselButtons > ul li > img {
+  display: block;
+  width: 100%;
+}
+
+
+/****************************/
+/* PREV EN NEXT LINKBUTTONS */
+/****************************/
+.caroCarrouselButtons > a {
+  width: 3em;
+  aspect-ratio:1/1;
+	top: calc(50% - 1.5em);
+  
+  color: var(--caroCarrouselButtonsMainColor);
+  background-color: var(--caroCarrouselButtonsShadeColor);
+  outline: none;
+	box-shadow: inset 0 0 0 1px currentColor;
+	
+  display:grid;
+  place-items:center;
+  
+  transition: 0.5s;
+}
+
+/* initieel staan de links "buiten beeld" */
+.caroCarrouselButtons > a[href="previous"] {
+  left:-3.5em;
+}
+.caroCarrouselButtons > a[href="next"] {
+  right: -3.5em;
+}
+
+/* bij hover en focus schuiven de links in beeld */
+.caroCarrouselButtons:hover > a[href="previous"],
+.caroCarrouselButtons:focus-within > a[href="previous"] {
+  left:.5em;
+}
+.caroCarrouselButtons:hover > a[href="next"],
+.caroCarrouselButtons:focus-within > a[href="next"] {
+  right:.5em;
+}
+
+/* prev en next linkbuttons pijltjes */
+.caroCarrouselButtons > a::before,
+.caroCarrouselButtons > a::after {
+  content: "";
+  position: absolute;
+  width: 1em; height: 4px;
+  background-color: currentColor;
+}
+
+.caroCarrouselButtons > a[href=previous]::before {
+	transform-origin: 2px center;
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrouselButtons > a[href=previous]::after {
+	transform-origin: 2px center;
+	transform: translateY(0) rotate(-45deg);
+}
+
+.caroCarrouselButtons > a[href=next]::before {
+	transform-origin: calc(100% - 2px) center;
+	transform: translateY(0) rotate(45deg);
+}
+.caroCarrouselButtons > a[href=next]::after {
+	transform-origin: calc(100% - 2px) center;
+	transform: translateY(0) rotate(-45deg);
+}
+
+.caroCarrouselButtons > a:hover,
+.caroCarrouselButtons > a:focus {
+  color: var(--caroCarrouselButtonsAccentColor);
+}

@@ -86,7 +86,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   
   Visueel is de website nog goed te doen gezien dat de achtergrond wit of zwart is (gebasseerd op jouw instellingen). Zelfs de highlighted knoppen kunnen nog goed gezien worden.
 
-  De website is goed te gebruiken met verschillende visuele beperkingen. Maar het is te gebruiken.
+  De website is goed te gebruiken met verschillende visuele beperkingen.
 
 </details>
 
@@ -163,16 +163,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Meerdere carrouserls maken en de hamburger nav menu waren beide erg lastige opdrachten om goed te krijgen op mijn website
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
+  Laura Wilting:
+  Ik snap mijn footer niet
+
+  Youri Langenberg:
+  Nog geen vragen
+
+  Pepijn de Wolff
+
 
 
   ### Verslag van meeting
