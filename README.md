@@ -176,7 +176,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nog geen vragen
 
   Pepijn de Wolff
-
+  Wat je extra kan toevoegen qua toegankelijkheid
 
 
   ### Verslag van meeting
