@@ -125,7 +125,7 @@ function createCaroButtons(carrouselID) {
     let carrousel = document.querySelector("#"+carrouselID);
     let carrouselElementsContainer = carrousel.querySelector(":scope > ul");
 	let carrouselElements = carrouselElementsContainer.querySelectorAll("li");
-    let linkButtons = carrousel.querySelectorAll(":scope > a");
+    let linkButtons = carrousel.querySelectorAll(":scope > div > a");
   
   
     /*****************************/
@@ -173,7 +173,7 @@ function createCaroButtons(carrouselID) {
 		// het huidige current element opzoeken
 		let currentElement = carrousel.querySelector(":scope > ul > .current");
         let currentUl = carrousel.querySelector(":scope > ul");
-        let currentCounter = carrousel.querySelector(":scope > p");
+        let currentCounter = carrousel.querySelector(":scope > div > p");
 
 		let newElement;
 
@@ -194,7 +194,7 @@ function createCaroButtons(carrouselID) {
 		}
 
         var liNumber = Array.prototype.indexOf.call(currentUl.children, newElement) + 1;
-        currentCounter.innerHTML = liNumber + " / " + currentUl.children.length;
+        currentCounter.innerHTML = liNumber + "/" + currentUl.children.length;
 
 		// naar het nieuwe element scrollen
 		scrollToElement(newElement);

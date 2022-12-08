@@ -15,6 +15,8 @@ body{
 	  justify-content:center;
 
 	margin: 0;
+
+	background-color: var(--main-background-color);
 }
 
 li{
@@ -34,6 +36,8 @@ li{
 	--font-body-family: Poppins, sans-serif;
 	--gradient-background: linear-gradient(90deg, rgba(227,29,132,1) 0%, rgba(252,121,0,1) 100%);
 	--text-color-white:#fff;
+	--main-background-color:#EEEEEE;
+	--price-tag-color:#404040;
 }
 
 
@@ -44,10 +48,8 @@ li{
 /* KLEIN SCHERM */
 /****************/
 
-
 header{
-	
-
+	height: 10em;
 }
 
 header div {
@@ -55,10 +57,11 @@ header div {
 	grid-template-columns: 1fr max-content 1fr;
 	column-gap: .25em;
 
-	background-color: white;
+	background-color: var(--main-background-color);
 
 	position: relative;
 	z-index: 200;
+	
 }
 
 /* Icons */
@@ -78,10 +81,28 @@ header div nav{
 	grid-row-start: 2;
 }
 
-header div nav > ul > li > img{
+header div nav > ul > li button{
+	background: none;
+	color: inherit;
+	border: none;
+
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+header div nav > ul > li button img{
+	
 	width: 1.2em;
 	height: 1.2em;
 }
+
+header div nav > ul > li img:hover{
+	width: 1.3em;
+	height: 1.3em;
+	transition: 0.3s;
+}
+
 
 
 	
@@ -97,6 +118,12 @@ header div > a img {
 	height: 3em;
 }
 
+header div > a img:hover{
+	width: 3.1em;
+	height: 3.1em;
+	transition: 0.3s;
+}
+
 /* hamburger */
 header div > button {
 	grid-column-start: 1;
@@ -110,6 +137,12 @@ header div > button img {
 	width: 2em;
 	height: 2em;
 	margin: 1em;
+}
+
+header div > button img:hover{
+	width: 2.1em;
+	height: 2.1em;
+	transition: 0.3s;
 }
 
 
@@ -172,9 +205,40 @@ header > ul li{
 }
 
 
+main{
+	display: grid;
+	gap: 4em;
+	padding-bottom: 5em;
+}
 
 
+main section:nth-child(3) h2{
+	font-family: var(--font-body-family);
+	text-transform: uppercase;
+	color: #484848;
+	font-size: xx-large;
+	font-weight: bold;
+}
 
+main section:nth-of-type(3) button{
+
+	background: var(--gradient-background);
+	height: 5em;
+	width: 17em;
+	outline: none;
+	border-radius: 1em;
+
+}
+
+main section:nth-of-type(3) button p{
+	color: var(--text-color-white);
+	font-family: var(--font-body-family);
+	font-weight: bold;
+	text-align: center;
+	font-size: large;
+	margin: 0;
+	text-transform: uppercase;
+}
 
 
 
@@ -330,6 +394,7 @@ header > ul li{
 	--caroCarrouselButtonsMainColor:#333;
   --caroCarrouselButtonsAccentColor:#1b75b3;
 	--caroCarrouselButtonsShadeColor:#ddd9;
+	--caroCarrouselBackgroundColor:#F3F3F3;
 
   position: relative;
   overflow: hidden; /* om de linkbuttons te verbergen */
@@ -344,7 +409,7 @@ header > ul li{
 /* dark mode */
 @media (prefers-color-scheme: dark) {
   .caroCarrouselButtons {
-    --caroCarrouselButtonsMainColor:#ccc;
+    --caroCarrouselButtonsMainColor:#000000;
     --caroCarrouselButtonsShadeColor:#4449;
   }
 }
@@ -353,7 +418,7 @@ header > ul li{
 /************************************/
 /* de carrousel elementen container */
 .caroCarrouselButtons > ul {
-  margin: 0; padding: 0;
+  margin: 0; padding: 1em;
   list-style: none;
 	display: flex;
 	
@@ -370,6 +435,11 @@ header > ul li{
   -webkit-overflow-scrolling: touch; /* voor iOS*/
   -ms-overflow-style: none; /* voor IE */
 	scrollbar-width: none; /* voor firefox */
+
+	border-radius: 1em;
+	  max-width: 100%;
+	  /* background-color: var(--caroCarrouselBackgroundColor); */
+	  /* max-height: 90%; */
 }
 
 .caroCarrouselButtons > ul::-webkit-scrollbar {
@@ -395,74 +465,228 @@ header > ul li{
 .caroCarrouselButtons > ul li > img {
   display: block;
   width: 100%;
+  height: min(30em, 100vw);
+  object-fit: contain;
+  background-color: var(--caroCarrouselBackgroundColor);
+}
+
+.caroCarrouselButtons > ul li > h3{
+	font-family: var(--font-body-family);
+	color: var(--color-text);
+	text-align: center;
+	font-size: x-large;
+	margin: 0;
+	letter-spacing: .03em;
+	text-transform: capitalize;
+}
+
+.caroCarrouselButtons > ul li > p{
+	font-family: var(--font-body-family);
+	color: var(--price-tag-color);
+	text-align: center;
+	margin: 0;
+	font-size: large;
+	letter-spacing: .03em;
+	font-weight: bold;
+}
+
+.caroCarrouselButtons > div > p{
+	font-family: var(--font-body-family);
+	font-size: small;
+	font-weight: bold;
 }
 
 
 /****************************/
 /* PREV EN NEXT LINKBUTTONS */
 /****************************/
-.caroCarrouselButtons > a {
-  width: 3em;
-  aspect-ratio:1/1;
-	top: calc(50% - 1.5em);
-  
-  color: var(--caroCarrouselButtonsMainColor);
-  background-color: var(--caroCarrouselButtonsShadeColor);
-  outline: none;
-	box-shadow: inset 0 0 0 1px currentColor;
+.caroCarrouselButtons > div{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+}
+
+.caroCarrouselButtons > div > a {
+	position: relative;
+
+	color: var(--caroCarrouselButtonsMainColor);
+	outline: none;
+		
+	display:grid;
+	place-items:center;
+
+	width:2em;
+	aspect-ratio:1/1;
 	
-  display:grid;
-  place-items:center;
-  
-  transition: 0.5s;
-}
-
-/* initieel staan de links "buiten beeld" */
-.caroCarrouselButtons > a[href="previous"] {
-  left:-3.5em;
-}
-.caroCarrouselButtons > a[href="next"] {
-  right: -3.5em;
-}
-
-/* bij hover en focus schuiven de links in beeld */
-.caroCarrouselButtons:hover > a[href="previous"],
-.caroCarrouselButtons:focus-within > a[href="previous"] {
-  left:.5em;
-}
-.caroCarrouselButtons:hover > a[href="next"],
-.caroCarrouselButtons:focus-within > a[href="next"] {
-  right:.5em;
+	transition: 0.5s;
 }
 
 /* prev en next linkbuttons pijltjes */
-.caroCarrouselButtons > a::before,
-.caroCarrouselButtons > a::after {
+.caroCarrouselButtons > div > a::before,
+.caroCarrouselButtons > div > a::after {
   content: "";
   position: absolute;
-  width: 1em; height: 4px;
+  width: .4em; height: 2px;
   background-color: currentColor;
 }
 
-.caroCarrouselButtons > a[href=previous]::before {
-	transform-origin: 2px center;
-	transform: translateY(0) rotate(45deg);
+.caroCarrouselButtons > div > a[href=previous]::before {
+	transform-origin: 1px 1px;
+	transform: rotate(45deg);
 }
-.caroCarrouselButtons > a[href=previous]::after {
-	transform-origin: 2px center;
-	transform: translateY(0) rotate(-45deg);
-}
-
-.caroCarrouselButtons > a[href=next]::before {
-	transform-origin: calc(100% - 2px) center;
-	transform: translateY(0) rotate(45deg);
-}
-.caroCarrouselButtons > a[href=next]::after {
-	transform-origin: calc(100% - 2px) center;
-	transform: translateY(0) rotate(-45deg);
+.caroCarrouselButtons > div > a[href=previous]::after {
+	transform-origin: 1px 1px;
+	transform: rotate(-45deg);
 }
 
-.caroCarrouselButtons > a:hover,
-.caroCarrouselButtons > a:focus {
+.caroCarrouselButtons > div > a[href=next]::before {
+	transform-origin: calc(100% - 1px) 1px;
+	transform: rotate(45deg);
+}
+.caroCarrouselButtons > div > a[href=next]::after {
+	transform-origin: calc(100% - 1px) 1px;
+	transform: rotate(-45deg);
+}
+
+
+
+/* bij hover en focus schuiven de links in beeld */
+.caroCarrouselButtons > a[href="previous"]:hover,
+.caroCarrouselButtons > a[href="previous"]:focus  {
+
+}
+.caroCarrouselButtons > a[href="next"]:hover,
+.caroCarrouselButtons > a[href="next"]:focus {
+
+}
+
+.caroCarrouselButtons > div > a:hover,
+.caroCarrouselButtons > div > a:focus {
   color: var(--caroCarrouselButtonsAccentColor);
 }
+
+footer{
+	/* display: flex;
+	flex-wrap:wrap-reverse;
+	justify-items: center;
+	flex-direction: column;
+	justify-content: center; */
+	display: grid;
+	justify-content: center;
+	justify-items: center;
+	text-align: center;
+}
+
+footer h2{
+	font-family: var(--font-body-family);
+	color: var(--gradient-background);
+	text-align: center;
+	margin: 0;
+	font-size:2.5em;
+	letter-spacing: .03em;
+	font-weight: bold;
+	letter-spacing: .01em;
+	text-transform: uppercase;
+
+	background: var(--gradient-background);
+	background-clip: text;
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.form {
+	width: 80%;
+	position: relative;
+	height: 60px;
+	overflow: hidden;
+  }
+  
+  .form input {
+	width: 100%;
+	height: 100%;
+	color: var(--color-text);
+	padding-top: 20px;
+	border: none;
+	background-color: var(--main-background-color);
+  }
+  .form label {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	/* height: 100%; */
+	pointer-events: none;
+	border-bottom: 3px solid var(--color-text);
+	font-family: var(--font-body-family);
+  }
+  .form label::after {
+	content: "";
+	position: absolute;
+	bottom: -1px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	transform: translateX(-100%);
+	transition: all 0.3s ease;
+  }
+  
+  .content-name {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding-bottom: 5px;
+	transition: all 0.1s ease;
+  }
+  .form input:focus {
+	outline: none;
+  }
+  .form input:focus + .label-name .content-name,
+  .form input:valid + .label-name .content-name {
+	transform: translateY(-150%);
+	font-size: 14px;
+	left: 0px;
+	color: currentColor;
+  }
+  .form input:focus + .label-name::after,
+  .form input:valid + .label-name::after {
+	transform: translateX(0%);
+  }
+
+
+footer h3{
+	text-align: center;
+	font-family: var(--font-body-family);
+	text-transform: uppercase;
+	color: var(--price-tag-color);
+}
+
+footer ul{
+	display: grid;
+	gap: 2em;
+	justify-content: center;
+}
+
+footer > p,
+footer ul li{
+	font-family: var(--font-body-family);
+	color: var(--price-tag-color);
+	font-weight: bold;
+	letter-spacing: .03em;
+}
+
+footer p:nth-last-of-type(2){
+	text-transform: uppercase;
+	color:var(--color-text);
+	font-size: x-large;
+	margin-bottom: 0;
+}
+
+footer p:nth-of-type(3){
+	text-transform: capitalize;
+	color:var(--color-text);
+	font-size: x-large;
+	margin: 0;
+}
+

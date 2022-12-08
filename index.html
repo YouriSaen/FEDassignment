@@ -19,7 +19,7 @@
 				<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips" href="index.html">
 			</a>
 			
-			<!-- Hamburger menu -->
+			<!-- Hamburger menu bars-->
 			<button>
 				<img src="images/icons/bars-solid.svg">
 			</button>
@@ -27,9 +27,9 @@
 			<!-- Icons nav -->
 			<nav>
 				<ul>
-					<li><img src="images/icons/sun-regular.svg"></li>
-					<li><img src="images/icons/magnifying-glass-solid.svg"></li>
-					<li><img src="images/icons/cart-shopping-solid.svg"></li>
+					<li><button><img src="images/icons/sun-regular.svg" alt="Change to darkmode"></button></li>
+					<li><button><img src="images/icons/magnifying-glass-solid.svg" alt="Search products"></button></li>
+					<li><button><img src="images/icons/cart-shopping-solid.svg" alt="Go to shopping cart"></button></li>
 				</ul>
 			</nav>
 
@@ -42,6 +42,7 @@
 			</section>
 		</div>
 
+		<!-- Hamburger menu -->
 		<ul>
 			<li>Home</li>
 			<li>Gear</li>
@@ -80,29 +81,68 @@
 			  <li id="product3"><img src="images/ltt_products/lttstore_Beanies_TransparencyFile.webp" alt="Beanie" /></li>
 			</ul>
 
+			<div>
 			<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
-			<p>1 / 3</p>
+			<p>1/3</p>
   			<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+			</div>
 		  </section>
 
-		  <h2>Best sellers</h2>
 		  <!-- Carrousel #3 -->
 		  <section id="bestsellerCaro" class="caroCarrouselButtons" aria-label="Voorbeeld met één en een beetje" tabIndex="-1">
+			<h2>Best sellers</h2>
 			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
 			<ul>
-			  <li id="bestseller1"><img src="images/ltt_products/Lttstore_NorthernLightsDeskPad_TransparencyFile.webp" alt="Retro Polus Fleece" /></li>
-			  <li id="bestseller2"><img src="images/ltt_products/LTTScrewDriver-Transparent.webp" alt="Colour block hoodie" /></li>
-			  <li id="bestseller3"><img src="images/ltt_products/StandardBitSet_lttstoreImage-01_1.webp" alt="Beanie" /></li>
-			  <li id="bestseller4"><img src="images/ltt_products/lttstore_NewBottleColours_TransparencyFile_02.webp" alt="Water Bottle Colours" /></li>
-			  <li id="bestseller5"><img src="images/ltt_products/lttstore_Backpack_TransparencyFile.webp" alt="LTT Backpack" /></li>
-			  <li id="bestseller6"><img src="images/ltt_products/Lttstore_WaterBottleSpoutLid_TrasparentFiles.webp" alt="Water bottle spout lid" /></li>
+			  <li id="bestseller1"><img src="images/ltt_products/Lttstore_NorthernLightsDeskPad_TransparencyFile.webp" alt="Retro Polus Fleece" />
+			<h3>LTT northern lights Desk Pad</h3><p>$29.99 USD</p></li>
+			  <li id="bestseller2"><img src="images/ltt_products/LTTScrewDriver-Transparent.webp" alt="Colour block hoodie" />
+				<h3>screwdriver</h3><p>$69.99 USD</p></li>
+			  <li id="bestseller3"><img src="images/ltt_products/StandardBitSet_lttstoreImage-01_1.webp" alt="Beanie" />
+				<h3>screwdriver bit set</h3><p>$6.99 USD</p></li>
+			  <li id="bestseller4"><img src="images/ltt_products/lttstore_NewBottleColours_TransparencyFile_02.webp" alt="Water Bottle Colours" />
+				<h3>insulated water bottle</h3><p>$29.99 USD</p></li>
+			  <li id="bestseller5"><img src="images/ltt_products/lttstore_Backpack_TransparencyFile.webp" alt="LTT Backpack" />
+				<h3>backpack</h3><p>$249.99 USD</p></li>
+			  <li id="bestseller6"><img src="images/ltt_products/Lttstore_WaterBottleSpoutLid_TrasparentFiles.webp" alt="Water bottle spout lid" />
+				<h3>spout lid for LTT water bottle</h3><p>$5.99 USD</p></li>
 			</ul>
-
-			<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
-			<p>1 / 3</p>
-  			<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+			<div>
+				<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+				<p>1/6</p>
+				<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+			</div>
+			
+			  <button>
+				<p>View all</p>
+			  </button>
 		  </section>
 	</main>
+
+	<footer>
+		<h2>Subscribe to our newsletter</h2>
+		<div class="form">
+			<input type="text" name="text" autocomplete="off" required />
+			<label for="text" class="label-name">
+				<span class="content-name">
+					Email
+				</span>
+			</label>
+		  </div>
+		<h3>Info</h3>
+		<ul>
+			<li>Shipping Policy</li>
+			<li>Customs & Duty fees</li>
+			<li>Return Policy</li>
+			<li>Terms & Conditions</li>
+			<li>Privacy Policy</li>
+			<li>Newsletter</li>
+		</ul>
+		<h3>Support</h3>
+		<p>Support@lttstore.com</p>
+		<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips">
+		<p>© linus tech tips store</p>
+		<p>Powered by shopify</p>
+	</footer>
 
 	<script defer src="scripts/script.js"></script>
 </body>
