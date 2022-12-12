@@ -5,14 +5,18 @@
 	<meta charset="UTF-8">
 	<meta name="author" content="Youri Langenberg">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <meta name="color-scheme" media="(prefers-color-scheme: light)"> -->
+	<!-- <meta name="color-scheme" media="(prefers-color-scheme: dark)"> -->
 	<title>Howdy FED2223</title>
 	
-	<link href="styles/style.css" rel="stylesheet">
+	<link href="styles/homepage.css" rel="stylesheet">
+	<link href="styles/algemeen.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 	
 </head>
 
 <body>
+	<a href="#main"><p>skip to content</p></a>
 	<header>
 		<div>
 			<a href="">
@@ -21,15 +25,39 @@
 			
 			<!-- Hamburger menu bars-->
 			<button>
-				<img src="images/icons/bars-solid.svg">
+				<!-- <img src="images/icons/bars-solid.svg"> -->
+				<picture>
+					<source srcset="images/icons/bars-solid-darkmode.png" media="(prefers-color-scheme: dark)" alt="Hamburger menu">
+					<img src="images/icons/bars-solid.svg" alt="Hamburger menu">
+				  </picture>
 			</button>
 			
 			<!-- Icons nav -->
 			<nav>
 				<ul>
-					<li><button><img src="images/icons/sun-regular.svg" alt="Change to darkmode"></button></li>
-					<li><button><img src="images/icons/magnifying-glass-solid.svg" alt="Search products"></button></li>
-					<li><button><img src="images/icons/cart-shopping-solid.svg" alt="Go to shopping cart"></button></li>
+					<!-- <li><button><img src="images/icons/sun-regular.svg" alt="Change to darkmode"></button></li> -->
+					<li>
+						<button>
+						<picture>
+							<source srcset="images/icons/sun-regular-darkmode.png" media="(prefers-color-scheme: dark)" alt="Change to darkmode">
+							<img src="images/icons/moon-solid.svg" alt="Change to light-mode">
+						  </picture>
+						  </button>
+					</li>
+					 <li><button><!--<img src="images/icons/magnifying-glass-solid.svg" alt="Search products"> -->
+						<picture>
+							<source srcset="images/icons/magnifying-glass-darkmode.png" media="(prefers-color-scheme: dark)" alt="Search for products">
+							<img src="images/icons/magnifying-glass-solid.svg" alt="Search for products">
+						  </picture>
+					</button></li>
+					<li>
+						<button><!-- <img src="images/icons/cart-shopping-solid.svg" alt="Go to shopping cart"> -->
+							<picture>
+								<source srcset="images/icons/cart-shopping-darkmode.png" media="(prefers-color-scheme: dark)" alt="Shopping cart">
+								<img src="images/icons/cart-shopping-solid.svg" alt="Shopping cart">
+							  </picture>
+					</button>
+				</li>
 				</ul>
 			</nav>
 
@@ -76,9 +104,12 @@
 		  <section id="productCaro" class="caroCarrouselButtons" aria-label="Voorbeeld met één en een beetje" tabIndex="-1">
 			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
 			<ul>
-			  <li id="product1"><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" /></li>
-			  <li id="product2"><img src="images/ltt_products/lttstore_LTTColourblockHoodie_TransparencyFile.webp" alt="Colour block hoodie" /></li>
-			  <li id="product3"><img src="images/ltt_products/lttstore_Beanies_TransparencyFile.webp" alt="Beanie" /></li>
+			  <li id="product1"><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" />
+				<h3>retro polar fleece</h3><p>$39.99 USD</p></li>
+			  <li id="product2"><img src="images/ltt_products/lttstore_LTTColourblockHoodie_TransparencyFile.webp" alt="Colour block hoodie" />
+				<h3>color block hoodie</h3><p>$49.99 USD</p></li>
+			  <li id="product3"><img src="images/ltt_products/lttstore_Beanies_TransparencyFile.webp" alt="Beanie" />
+				<h3>beanie</h3><p>$19.99 USD</p></li>
 			</ul>
 
 			<div>
@@ -120,14 +151,14 @@
 
 	<footer>
 		<h2>Subscribe to our newsletter</h2>
-		<div class="form">
+		<form>
 			<input type="text" name="text" autocomplete="off" required />
 			<label for="text" class="label-name">
 				<span class="content-name">
 					Email
 				</span>
 			</label>
-		  </div>
+		</form>
 		<h3>Info</h3>
 		<ul>
 			<li>Shipping Policy</li>

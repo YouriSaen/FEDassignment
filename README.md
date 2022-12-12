@@ -99,14 +99,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### de hele pagina: 
   <img src="images/readme-images/lttstore_homepage_replica.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="images/readme-images/breakdownschets-homepage.png" width="375px" alt="breakdown van de homepagina">
+  <img src="images/readme-images/breakdownschets-storepage.png" width="375px" alt="breakdown van de store page">
 
   ### dynamisch deel (bijv menu): 
   -
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="images/readme-images/dynamic-carrousel.png" width="375px" alt="breakdown van een carrousel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   -
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+  <img src="images/readme-images/dynamic-filters.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 </details>
 
@@ -248,11 +250,11 @@ is mijn breakdownschets goed
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Padding weggehaald
+  - Scale
+  - Ja
+  - Visually hidden gebruiken voor screenreaders
+  - skip to content <a :focus gebruiken>
 
 </details>
 

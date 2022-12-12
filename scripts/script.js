@@ -253,4 +253,28 @@ function createCaroButtons(carrouselID) {
   createCaroButtons("productCaro");
   createCaroButtons("bestsellerCaro");
 })();
-  
+
+/************************/
+/* DARKMODE */
+/************************/
+let darkModeButton = document.querySelector("header div nav > ul > li button");
+let body = document.querySelector("body");
+
+function toggleDarkMode(){
+    if(body.classList.contains("dark"))
+    {
+        body.classList.remove("dark");
+        console.log("fuck");
+    }
+    
+}
+
+darkModeButton.addEventListener("click", toggleDarkMode);
+
+
+
+console.log(body.classList);
+
+
+
+

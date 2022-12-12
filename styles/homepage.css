@@ -1,210 +1,3 @@
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-button, summary {
-	cursor: pointer;
-}
-
-body{
-	/* Carrousel code */
-	grid-template-columns: minmax(auto, var(--maxWidth));
-	  justify-content:center;
-
-	margin: 0;
-
-	background-color: var(--main-background-color);
-}
-
-li{
-	list-style: none;
-}
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
-:root {
-	/* Carrousel code */
-	--maxWidth:32rem;
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
-	--font-body-family: Poppins, sans-serif;
-	--gradient-background: linear-gradient(90deg, rgba(227,29,132,1) 0%, rgba(252,121,0,1) 100%);
-	--text-color-white:#fff;
-	--main-background-color:#EEEEEE;
-	--price-tag-color:#404040;
-}
-
-
-
-
-
-/****************/
-/* KLEIN SCHERM */
-/****************/
-
-header{
-	height: 10em;
-}
-
-header div {
-	display: grid;
-	grid-template-columns: 1fr max-content 1fr;
-	column-gap: .25em;
-
-	background-color: var(--main-background-color);
-
-	position: relative;
-	z-index: 200;
-	
-}
-
-/* Icons */
-header div nav > ul{
-	/* als kind */
-	justify-self: end;
-	right: 1em;
-
-	/* als parent */
-	display: flex;
-	align-self: center;
-	gap: 1.5em;
-	
-}
-
-header div nav{
-	grid-row-start: 2;
-}
-
-header div nav > ul > li button{
-	background: none;
-	color: inherit;
-	border: none;
-
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
-}
-
-header div nav > ul > li button img{
-	
-	width: 1.2em;
-	height: 1.2em;
-}
-
-header div nav > ul > li img:hover{
-	width: 1.3em;
-	height: 1.3em;
-	transition: 0.3s;
-}
-
-
-
-	
-/* logo */
-header div > a {
-	padding-top: .5em;
-	grid-row-start: 2;
-	grid-column-start: 2;
-}
-
-header div > a img {
-	width: 3em;
-	height: 3em;
-}
-
-header div > a img:hover{
-	width: 3.1em;
-	height: 3.1em;
-	transition: 0.3s;
-}
-
-/* hamburger */
-header div > button {
-	grid-column-start: 1;
-	grid-row-start: 2;
-	justify-self: start;
-	padding: 0;
-	border: none;
-	background: none;
-}
-header div > button img {
-	width: 2em;
-	height: 2em;
-	margin: 1em;
-}
-
-header div > button img:hover{
-	width: 2.1em;
-	height: 2.1em;
-	transition: 0.3s;
-}
-
-
-
-
-/*warning text*/
-header div section {
-
-	grid-row-start: 1;
-	grid-column-end: -1;
-	grid-column-start: 1;
-}
-
-header div section p{
-	text-align: center;
-	font-family: var(--font-body-family);
-	background: var(--gradient-background);
-	color: var(--text-color-white);
-	letter-spacing: .1rem;
-	font-weight: 600;
-	font-size: .75em;
-	padding: 1em;
-	margin: 0;
-	text-transform: uppercase;
-}
-
-
-
-/* dat dit hier staat is de schuld van Sanne */
-header > ul { 
-	margin: 0;
-	padding:1em;
-	list-style:none;
-
-	position: fixed;
-	inset: 0;
-	z-index: 100;
-	transform: translatex(-100%);
-
-	display: flex;
-	flex-direction: column;
-	align-items:center;
-	justify-content: center;
-  	text-align: center;
-  	gap:1em;
-
-  	background-color: aqua;
-
-  	transition: .2s;
-}
-
-header > ul li{
-	font-family: var(--font-body-family);
-	font-weight: bold;
-	letter-spacing: .1em;
-}
-
-.hamburgerToggle{
-	transform: translateX(0);
-}
-
-
 main{
 	display: grid;
 	gap: 4em;
@@ -215,19 +8,27 @@ main{
 main section:nth-child(3) h2{
 	font-family: var(--font-body-family);
 	text-transform: uppercase;
-	color: #484848;
+	color: var(--bestseller-h2);
 	font-size: xx-large;
 	font-weight: bold;
 }
 
 main section:nth-of-type(3) button{
 
+	position: relative;
 	background: var(--gradient-background);
 	height: 5em;
 	width: 17em;
 	outline: none;
 	border-radius: 1em;
+	transition: .2s;
+	z-index: 300;
+	transform-origin: center bottom;
 
+}
+
+main section:nth-of-type(3) button:hover{
+	transform: scale(110%);
 }
 
 main section:nth-of-type(3) button p{
@@ -249,9 +50,7 @@ main section:nth-of-type(3) button p{
   .caroCarrouselBolletjes {
 	  /* basis waarden die door de hele carrousel gebruikt worden */
 	  /* kun je zelf aanpassen */
-	  --caroCarrouselBolletjesMainColor:#fff;
-	--caroCarrouselBolletjesAccentColor:#1b75b3;
-	  --caroCarrouselBolletjesShadeColor:rgba(229,229,229,60);
+	  
   
 	position: relative;
 	  outline:none;
@@ -261,12 +60,80 @@ main section:nth-of-type(3) button p{
   }
   
   /* dark mode */
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
+	:root{
+		--font-body-family: Poppins, sans-serif;
+		background:var(--darkmode-main-background);
+	  --caroCarrouselBolletjesShadeColor:rgba(229,229,229,60);
+	  --caroCarrouselBackgroundColor:#fff;
+	  --caroCarrouselButtonsMainColor:#ffffff;
+	  --caroCarrouselButtonsShadeColor:#ffffff;
+
+	  --color-text: #ffffff;
+	  --price-tag-color:#ffffff;
+	  --gradient-background:linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	  --main-background-color:#191919;
+	  /* --price-tag-color:#C5C5C5; */
+	  /* --bestseller-h2:#ffffff; */
+
+
+	/* }  */
+/* 
+	body{
+		background:var(--darkmode-main-background);
+	}
+
 	.caroCarrousel {
 	  --caroCarrouselBolletjesMainColor:#fff;
 	  --caroCarrouselBolletjesShadeColor:rgba(229,229,229,60);
 	}
-  }
+
+	.caroCarrouselButtons > ul li > img{
+
+		--caroCarrouselBackgroundColor:#373737;
+	}
+
+	.caroCarrouselButtons > ul li > h3{
+		--color-text: #ffffff;
+	}
+
+	.caroCarrouselButtons > ul li > p{
+		--price-tag-color:#ffffff;
+	}
+
+	main section:nth-child(3) h2{
+		--bestseller-h2:#ffffff;
+	}
+
+	main section:nth-of-type(3) button{
+		--gradient-background:linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	}
+
+	header div{
+		--main-background-color:#191919;
+	}
+
+	header section{
+		--gradient-background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	}
+
+	footer ul,
+	footer h3,
+	footer p{
+		--price-tag-color:#C5C5C5;
+	}
+
+	footer form input,
+	footer form label{
+		--main-background-color:#191919;
+		--color-text: #ffffff;
+	} */
+
+	/* form{
+		color: #fff;
+	} */
+
+
   
   
   /************************************/
@@ -391,10 +258,10 @@ main section:nth-of-type(3) button p{
   .caroCarrouselButtons {
 	/* basis waarden die door de hele carrousel gebruikt worden */
 	/* kun je zelf aanpassen */
-	--caroCarrouselButtonsMainColor:#333;
+	/* --caroCarrouselButtonsMainColor:#333;
   --caroCarrouselButtonsAccentColor:#1b75b3;
 	--caroCarrouselButtonsShadeColor:#ddd9;
-	--caroCarrouselBackgroundColor:#F3F3F3;
+	--caroCarrouselBackgroundColor:#F3F3F3; */
 
   position: relative;
   overflow: hidden; /* om de linkbuttons te verbergen */
@@ -404,14 +271,6 @@ main section:nth-of-type(3) button p{
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 1em;
-}
-
-/* dark mode */
-@media (prefers-color-scheme: dark) {
-  .caroCarrouselButtons {
-    --caroCarrouselButtonsMainColor:#000000;
-    --caroCarrouselButtonsShadeColor:#4449;
-  }
 }
 
 
@@ -455,6 +314,7 @@ main section:nth-of-type(3) button p{
   flex-shrink: 0;
   /* snappen als er gescrolled wordt - andere helft bij ul */
 	scroll-snap-align:center;
+	
 }
 
 
@@ -464,10 +324,11 @@ main section:nth-of-type(3) button p{
 /* de stijlen voor jouw content hier */
 .caroCarrouselButtons > ul li > img {
   display: block;
-  width: 100%;
+  width: 99%;
   height: min(30em, 100vw);
   object-fit: contain;
   background-color: var(--caroCarrouselBackgroundColor);
+  border-radius: 4%;
 }
 
 .caroCarrouselButtons > ul li > h3{
@@ -494,6 +355,7 @@ main section:nth-of-type(3) button p{
 	font-family: var(--font-body-family);
 	font-size: small;
 	font-weight: bold;
+	color: var(--color-text);
 }
 
 
@@ -506,6 +368,7 @@ main section:nth-of-type(3) button p{
 	justify-content: center;
 	align-items: center;
 	gap: 1em;
+	color: var(--color-text);
 }
 
 .caroCarrouselButtons > div > a {
@@ -565,128 +428,5 @@ main section:nth-of-type(3) button p{
 .caroCarrouselButtons > div > a:hover,
 .caroCarrouselButtons > div > a:focus {
   color: var(--caroCarrouselButtonsAccentColor);
-}
-
-footer{
-	/* display: flex;
-	flex-wrap:wrap-reverse;
-	justify-items: center;
-	flex-direction: column;
-	justify-content: center; */
-	display: grid;
-	justify-content: center;
-	justify-items: center;
-	text-align: center;
-}
-
-footer h2{
-	font-family: var(--font-body-family);
-	color: var(--gradient-background);
-	text-align: center;
-	margin: 0;
-	font-size:2.5em;
-	letter-spacing: .03em;
-	font-weight: bold;
-	letter-spacing: .01em;
-	text-transform: uppercase;
-
-	background: var(--gradient-background);
-	background-clip: text;
-  	-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-}
-
-.form {
-	width: 80%;
-	position: relative;
-	height: 60px;
-	overflow: hidden;
-  }
-  
-  .form input {
-	width: 100%;
-	height: 100%;
-	color: var(--color-text);
-	padding-top: 20px;
-	border: none;
-	background-color: var(--main-background-color);
-  }
-  .form label {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
-	/* height: 100%; */
-	pointer-events: none;
-	border-bottom: 3px solid var(--color-text);
-	font-family: var(--font-body-family);
-  }
-  .form label::after {
-	content: "";
-	position: absolute;
-	bottom: -1px;
-	left: 0px;
-	width: 100%;
-	height: 100%;
-	transform: translateX(-100%);
-	transition: all 0.3s ease;
-  }
-  
-  .content-name {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	padding-bottom: 5px;
-	transition: all 0.1s ease;
-  }
-  .form input:focus {
-	outline: none;
-  }
-  .form input:focus + .label-name .content-name,
-  .form input:valid + .label-name .content-name {
-	transform: translateY(-150%);
-	font-size: 14px;
-	left: 0px;
-	color: currentColor;
-  }
-  .form input:focus + .label-name::after,
-  .form input:valid + .label-name::after {
-	transform: translateX(0%);
-  }
-
-
-footer h3{
-	text-align: center;
-	font-family: var(--font-body-family);
-	text-transform: uppercase;
-	color: var(--price-tag-color);
-}
-
-footer ul{
-	display: grid;
-	gap: 2em;
-	justify-content: center;
-}
-
-footer > p,
-footer ul li{
-	font-family: var(--font-body-family);
-	color: var(--price-tag-color);
-	font-weight: bold;
-	letter-spacing: .03em;
-}
-
-footer p:nth-last-of-type(2){
-	text-transform: uppercase;
-	color:var(--color-text);
-	font-size: x-large;
-	margin-bottom: 0;
-}
-
-footer p:nth-of-type(3){
-	text-transform: capitalize;
-	color:var(--color-text);
-	font-size: x-large;
-	margin: 0;
 }
 

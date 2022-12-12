@@ -1,0 +1,28 @@
+
+
+ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    gap: 1%;
+}
+
+main section ul li img{
+    display: block;
+  height: min(43em, 43vw);
+  background-color: var(--caroCarrouselBackgroundColor);
+  border-radius: 4%;
+}
+
+main section ul li h3,
+main section ul li p{
+    text-align: center;
+    color: var(--price-tag-color);
+    margin: 0;
+    font-family: var(--font-body-family);
+    padding: 20%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
