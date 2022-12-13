@@ -5,7 +5,7 @@ main{
 }
 
 
-main section:nth-child(3) h2{
+main section:nth-of-type(3) h1{
 	font-family: var(--font-body-family);
 	text-transform: uppercase;
 	color: var(--bestseller-h2);

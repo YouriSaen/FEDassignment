@@ -12,37 +12,59 @@ main>ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: auto;
+    
 
     gap: 2em;
 
     background-color: var(--main-background-color);
-    color: #ddd;
+    color: var(color-text);
     font-family: var(--font-body-family);
     text-transform: capitalize;
+    color: var(--color-text);
     transition: .2s;
+}
+
+main > ul li{
+    display: flex;
+    justify-content: space-between;
+}
+
+main ul li:nth-of-type(7){
+    display: flex;
+    justify-content: end;
 }
 
 .filterToggle {
     transform: translateX(0);
 }
 
+main > ul li picture img{
+    width: 1em;
+    height: 1em;
+}
+
 main ul li button{
 	background: var(--gradient-background);
+    font-family: var(--font-body-family);
+    font-weight: bolder;
+    color: var(--color-text);
 	text-decoration: none;
 	border-radius: 1em;
-	height: 4em;
+	height: 5em;
 	width: 17em;
 	z-index: 300;
 }
 
-main > ul li{
-    display: flex;
-    gap: 50%;
+main ul li button p{
+    font-size: x-large;
+    margin: 0;
 }
 
-main ul li:nth-of-type(7){
-    display: flex;
-    justify-content: end;
+main > ul li label input{
+    background-color: var(--main-background-color);
+    outline: var(--color-text);
+    color: var(--color-text);
 }
 
 main>section {
@@ -80,20 +102,28 @@ main>section button picture img {
     width: 1em;
 }
 
+main section:nth-of-type(2){
+    padding: 1.7em;
+    padding-top: 0;
+}
+
 main section ul {
     margin: 0;
     width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 5%;
-    padding: 10em;
-    padding-top: 0;
+    justify-content:center;
+    flex-wrap: wrap;
+    justify-items: center;
+    padding: 0;
+
+    
 }
 
 main section ul li {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin: 0;
+    flex: 20%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+  /*demo*/
+
+
 }
 
 main section ul li img {

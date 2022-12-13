@@ -268,19 +268,30 @@ is mijn breakdownschets goed
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="images/readme-images/homepage-replica-final.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="images/readme-images/productspage-replica-final.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="images/readme-images/hamburgermenu-replica-final.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="images/readme-images/filterlist-replica-final.jpg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  De inputs (lijsten, email) is het lastigst om zelf te designen. Er zijn heel veel dingen die je kunt doen en eigenlijk wel weinig
+  informatie te vinden op google daarover. Daarna is het de carrousels die ik zonder de hulp van Sanne niet had kunnen maken in de tijd die wij hebben gekregen. (dankjewel Sanne). Maar het is toch wel redelijk gelukt. Ook flexbox is super makkelijk te gebruiken zodra je weet hoe het nou precies werkt en waar je een flexbox op kan stoppen en waar niet.
+
+  Ook heb ik geleerd wat een <picture> doet en dat custom properties heel handig zijn om te gebruiken.
+
+
+  <img src="readme-images/inputlist.jpg" width="375px" alt="input">
+    <img src="readme-images/inputemail.jpg" width="375px" alt="input">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatjes
+  Darkmode knop is niet gelukt. Dit heb ik een tijdje geprobeerd met classes en van alles maar niks lukte. heb het ook geprobeerd met <meta> maar niks werkte.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="images/icons/sun-regular(1).svg" width="375px" alt="bummer">
 </details>
 
 
@@ -292,10 +303,6 @@ is mijn breakdownschets goed
 <details open>
   <summary>continu bijhouden terwijl je werkt</summary>
 
-  Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-
-  1. bron 1
-  2. bron 2
-  3. ...
+  Bronnen staan in mijn comments.
 
 </details>

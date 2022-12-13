@@ -7,11 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <meta name="color-scheme" media="(prefers-color-scheme: light)"> -->
 	<!-- <meta name="color-scheme" media="(prefers-color-scheme: dark)"> -->
-	<title>Howdy FED2223</title>
+	<title>Linus Tech Tips Store</title>
 
 	<link href="styles/algemeen.css" rel="stylesheet">
 	<link href="styles/allproducts.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/LTT_Logo.png">
 
 </head>
 
@@ -80,30 +80,92 @@
 
 		<!-- Hamburger menu -->
 		<ul>
-			<li>Home</li>
+			<a href="index.html"><li>Home</li></a>
 			<li>Gear</li>
 			<li>Clothing</li>
-			<li>All Products</li>
+			<li href="allproducts.html">All Products</li>
 		</ul>
 
 	</header>
 
 	<main>
+		<h1 class="visually-hidden">Main content</h1>
+		<section>
+			<button>
+				<picture>
+					<source srcset="images/icons/filter-solid-darkmode.png" media="(prefers-color-scheme: dark)"
+						alt="filter icon">
+					<img src="images/icons/filter-solid.svg" alt="filter icon">
+				</picture>
+				Filter and sort
+			</button>
+			<p>xx Products</p>
+		</section>
+
+		<section>
+			<h1 class="visually-hidden">Products list</h1>
+			<ul>
+				<li><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp"
+						alt="ABC Book Character Plush" />
+					<h3>ABC Book Character Plush</h3>
+					<p>$39.99 USD</p>
+				</li>
+				<li><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" />
+					<h3>retro polar fleece</h3>
+					<p>$39.99 USD</p>
+				</li>
+				<li><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" />
+					<h3>retro polar fleece</h3>
+					<p>$39.99 USD</p>
+				</li>
+				<li><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" />
+					<h3>retro polar fleece</h3>
+					<p>$39.99 USD</p>
+				</li>
+			</ul>
+		</section>
+
+		<h1 class="visually-hidden">Filter content</h1>
 		<ul>
 			<li>
 				availability
+				<picture>
+					<source srcset="images/icons/arrow-right-solid-darkmode.png" media="(prefers-color-scheme: dark)"
+						alt="availability filter">
+					<img src="images/icons/arrow-right-solid.svg" alt="availability filter">
+				</picture>
 			</li>
 			<li>
 				price
+				<picture>
+					<source srcset="images/icons/arrow-right-solid-darkmode.png" media="(prefers-color-scheme: dark)"
+						alt="price filter">
+					<img src="images/icons/arrow-right-solid.svg" alt="price filter">
+				</picture>
 			</li>
 			<li>
 				color
+				<picture>
+					<source srcset="images/icons/arrow-right-solid-darkmode.png" media="(prefers-color-scheme: dark)"
+						alt="color filter">
+					<img src="images/icons/arrow-right-solid.svg" alt="color filter">
+				</picture>
 			</li>
 			<li>
 				size
+				<picture>
+					<source srcset="images/icons/arrow-right-solid-darkmode.png" media="(prefers-color-scheme: dark)"
+						alt="availability filter">
+					<img src="images/icons/arrow-right-solid.svg" alt="availability filter">
+				</picture>
 			</li>
 			<li>
-				wait size
+				weight size
+				<picture>
+					<source srcset="images/icons/arrow-right-solid-darkmode.png" media="(prefers-color-scheme: dark)"
+						alt="weight size filter">
+					<img src="images/icons/arrow-right-solid.svg" alt="weight size filter">
+				</picture>
 			</li>
 			<li>
 				sort by
@@ -118,36 +180,10 @@
 			</li>
 			<li>
 				<button>
-					<p>Apply</p>
+					<p>Apply <span class="visually-hidden">filled in filters</span></p>
 				</button>
 			</li>
 		</ul>
-
-		<section>
-			<button>
-				<picture>
-					<source srcset="images/icons/filter-solid-darkmode.png" media="(prefers-color-scheme: dark)"
-						alt="Change to darkmode">
-					<img src="images/icons/filter-solid.svg" alt="Change to light-mode">
-				</picture>
-				Filter and sort
-			</button>
-			<p>xx Products</p>
-		</section>
-
-		<section>
-			<ul>
-				<li><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp"
-						alt="ABC Book Character Plush" />
-					<h3>ABC Book Character Plush</h3>
-					<p>$39.99 USD</p>
-				</li>
-				<li><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" />
-					<h3>retro polar fleece</h3>
-					<p>$39.99 USD</p>
-				</li>
-			</ul>
-		</section>
 
 	</main>
 
@@ -172,7 +208,7 @@
 		</ul>
 		<h3>Support</h3>
 		<p>Support@lttstore.com</p>
-		<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips">
+		<a href="index.html"><span class="visually-hidden">Go back to the top</span><img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips"></a>
 		<p>© linus tech tips store</p>
 		<p>Powered by shopify</p>
 	</footer>

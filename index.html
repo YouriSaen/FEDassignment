@@ -7,11 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- <meta name="color-scheme" media="(prefers-color-scheme: light)"> -->
 	<!-- <meta name="color-scheme" media="(prefers-color-scheme: dark)"> -->
-	<title>Howdy FED2223</title>
+	<title>Linus Tech Tips Store</title>
 	
 	<link href="styles/homepage.css" rel="stylesheet">
 	<link href="styles/algemeen.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/LTT_Logo.png">
 	
 </head>
 
@@ -20,7 +20,7 @@
 	<header>
 		<div>
 			<a href="">
-				<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips" href="index.html">
+				<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips, go to the homepage " href="index.html">
 			</a>
 			
 			<!-- Hamburger menu bars-->
@@ -72,19 +72,20 @@
 
 		<!-- Hamburger menu -->
 		<ul>
-			<li>Home</li>
+			<li><a href="index.html">Home</a></li>
 			<li>Gear</li>
 			<li>Clothing</li>
-			<li>All Products</li>
+			<li><a href="allproducts.html">All Products</a></li>
 		</ul>
 		
 	</header>
 
 	<main>
-		  
+		  <h1 class="visually-hidden">Main content</h1>
 		<!-- Carrousel #1 -->
-		  <section id="bannerCaro" class="caroCarrouselBolletjes" aria-label="Voorbeeld met alleen bolletjes" tabIndex="-1">
+		  <section id="bannerCaro" class="caroCarrouselBolletjes" aria-label="Banner carrousel" tabIndex="-1">
 			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
+			<h1 class="visually-hidden">Banner carrousel</h1>
 			<ul>
 			  <li id="banner1"><img src="images/banners/Black_Friday_Banner_Nov_27_Shortcircuit_Sweatpants_Hoodie_Mobile_750x.webp" alt="Shortcircuit Sweatpants Black Friday Deal" /></li>
 			  <li id="banner2"><img src="images/banners/LTT_New_Water_Bottle_Colours_Banner_Mobile_750x.webp" alt="New Water Bottle Colors" /></li>
@@ -101,8 +102,9 @@
 		  </section>
 
 		  <!-- Carrousel #2 -->
-		  <section id="productCaro" class="caroCarrouselButtons" aria-label="Voorbeeld met één en een beetje" tabIndex="-1">
+		  <section id="productCaro" class="caroCarrouselButtons" aria-label="Highlighted products carrousel" tabIndex="-1">
 			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
+			<h1 class="visually-hidden">Highlighted products carrousel</h1>
 			<ul>
 			  <li id="product1"><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" />
 				<h3>retro polar fleece</h3><p>$39.99 USD</p></li>
@@ -120,31 +122,31 @@
 		  </section>
 
 		  <!-- Carrousel #3 -->
-		  <section id="bestsellerCaro" class="caroCarrouselButtons" aria-label="Voorbeeld met één en een beetje" tabIndex="-1">
-			<h2>Best sellers</h2>
+		  <section id="bestsellerCaro" class="caroCarrouselButtons" aria-label="Bestseller carrousel" tabIndex="-1">
+			<h1>Best sellers</h1>
 			<!-- de id kun je zelf een naam geven en geef je mee in de js -->
 			<ul>
-			  <li id="bestseller1"><img src="images/ltt_products/Lttstore_NorthernLightsDeskPad_TransparencyFile.webp" alt="Retro Polus Fleece" />
+			  <li id="bestseller1"><img src="images/ltt_products/Lttstore_NorthernLightsDeskPad_TransparencyFile.webp" alt="Northernlights Deskpad" />
 			<h3>LTT northern lights Desk Pad</h3><p>$29.99 USD</p></li>
-			  <li id="bestseller2"><img src="images/ltt_products/LTTScrewDriver-Transparent.webp" alt="Colour block hoodie" />
+			  <li id="bestseller2"><img src="images/ltt_products/LTTScrewDriver-Transparent.webp" alt="Screwdriver" />
 				<h3>screwdriver</h3><p>$69.99 USD</p></li>
-			  <li id="bestseller3"><img src="images/ltt_products/StandardBitSet_lttstoreImage-01_1.webp" alt="Beanie" />
+			  <li id="bestseller3"><img src="images/ltt_products/StandardBitSet_lttstoreImage-01_1.webp" alt="screwdriver bitset 12 bits" />
 				<h3>screwdriver bit set</h3><p>$6.99 USD</p></li>
-			  <li id="bestseller4"><img src="images/ltt_products/lttstore_NewBottleColours_TransparencyFile_02.webp" alt="Water Bottle Colours" />
+			  <li id="bestseller4"><img src="images/ltt_products/lttstore_NewBottleColours_TransparencyFile_02.webp" alt="Water Bottle in different colors" />
 				<h3>insulated water bottle</h3><p>$29.99 USD</p></li>
-			  <li id="bestseller5"><img src="images/ltt_products/lttstore_Backpack_TransparencyFile.webp" alt="LTT Backpack" />
+			  <li id="bestseller5"><img src="images/ltt_products/lttstore_Backpack_TransparencyFile.webp" alt="Linus Tech Tips Backpack" />
 				<h3>backpack</h3><p>$249.99 USD</p></li>
 			  <li id="bestseller6"><img src="images/ltt_products/Lttstore_WaterBottleSpoutLid_TrasparentFiles.webp" alt="Water bottle spout lid" />
 				<h3>spout lid for LTT water bottle</h3><p>$5.99 USD</p></li>
 			</ul>
 			<div>
-				<a href="previous" aria-label="Naar het element aan de linkerkant"></a>
+				<a href="previous" aria-label="To previous banner picture"></a>
 				<p>1/6</p>
-				<a href="next" aria-label="Naar het element aan de rechterkant"></a>
+				<a href="next" aria-label="To the next banner picture"></a>
 			</div>
 			
 			  <button>
-				<p>View all</p>
+				<p>View all <span class="visually-hidden">products</span></p>
 			  </button>
 		  </section>
 	</main>
@@ -170,7 +172,7 @@
 		</ul>
 		<h3>Support</h3>
 		<p>Support@lttstore.com</p>
-		<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips">
+		<a href="index.html"><span class="visually-hidden">Go back to the top</span><img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips"></a>
 		<p>© linus tech tips store</p>
 		<p>Powered by shopify</p>
 	</footer>
