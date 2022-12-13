@@ -224,7 +224,7 @@ header div section p{
 /* dat dit hier staat is de schuld van Sanne */
 header > ul { 
 	margin: 0;
-	padding:1em;
+	padding:1sem;
 	list-style:none;
 
 	position: fixed;

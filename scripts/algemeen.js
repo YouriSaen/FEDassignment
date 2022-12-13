@@ -9,6 +9,8 @@ function toggleMenu(){
     hamburgerMenu.classList.toggle("hamburgerToggle");
 }
 
+
+
 // Carrousel code
 function createCaroBolletjes(carrouselID) {
 	let carrousel = document.querySelector("#"+carrouselID);
@@ -256,24 +258,25 @@ function createCaroButtons(carrouselID) {
 
 /************************/
 /* DARKMODE */
+// IT DOESNT WORK OMG AAAAAAÅAÆAÂH 
 /************************/
-let darkModeButton = document.querySelector("header div nav > ul > li button");
-let body = document.querySelector("body");
+// let darkModeButton = document.querySelector("header div nav > ul > li button");
+// let body = document.querySelector("body");
 
-function toggleDarkMode(){
-    if(body.classList.contains("dark"))
-    {
-        body.classList.remove("dark");
-        console.log("fuck");
-    }
+// function toggleDarkMode(){
+//     if(body.classList.contains("dark"))
+//     {
+//         body.classList.remove("dark");
+//         console.log("fuck");
+//     }
     
-}
+// }
 
-darkModeButton.addEventListener("click", toggleDarkMode);
+// darkModeButton.addEventListener("click", toggleDarkMode);
 
 
 
-console.log(body.classList);
+// console.log(body.classList);
 
 
 

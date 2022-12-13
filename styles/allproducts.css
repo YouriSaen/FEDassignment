@@ -1,28 +1,113 @@
-
-
-ul{
+main>ul {
     margin: 0;
-    padding: 0;
-    width: 100%;
+    padding: 1em;
+    list-style: none;
+
+
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    transform: translatex(100%);
+
     display: flex;
-    justify-content:center;
-    gap: 1%;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 2em;
+
+    background-color: var(--main-background-color);
+    color: #ddd;
+    font-family: var(--font-body-family);
+    text-transform: capitalize;
+    transition: .2s;
 }
 
-main section ul li img{
+.filterToggle {
+    transform: translateX(0);
+}
+
+main ul li button{
+	background: var(--gradient-background);
+	text-decoration: none;
+	border-radius: 1em;
+	height: 4em;
+	width: 17em;
+	z-index: 300;
+}
+
+main > ul li{
+    display: flex;
+    gap: 50%;
+}
+
+main ul li:nth-of-type(7){
+    display: flex;
+    justify-content: end;
+}
+
+main>section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+main>section button {
+
+
+    background: none;
+    color: inherit;
+    border: none;
+
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    padding: 0;
+    color: #ddd;
+    font-size: medium;
+    font-weight: bold;
+    font-family: var(--font-body-family);
+}
+
+main>section p {
+    color: #ddd;
+    font-size: medium;
+    font-weight: bold;
+    font-family: var(--font-body-family);
+}
+
+main>section button picture img {
+    height: 1em;
+    width: 1em;
+}
+
+main section ul {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 10em;
+    padding-top: 0;
+}
+
+main section ul li {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+main section ul li img {
     display: block;
-  height: min(43em, 43vw);
-  background-color: var(--caroCarrouselBackgroundColor);
-  border-radius: 4%;
+    height: min(43em, 43vw);
+    margin: 0;
+    background-color: var(--caroCarrouselBackgroundColor);
+    border-radius: 4%;
 }
 
 main section ul li h3,
-main section ul li p{
+main section ul li p {
     text-align: center;
     color: var(--price-tag-color);
     margin: 0;
     font-family: var(--font-body-family);
-    padding: 20%;
-    padding-top: 0;
-    padding-bottom: 0;
 }

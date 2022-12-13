@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-	
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="author" content="Youri Langenberg">
@@ -8,63 +8,71 @@
 	<!-- <meta name="color-scheme" media="(prefers-color-scheme: light)"> -->
 	<!-- <meta name="color-scheme" media="(prefers-color-scheme: dark)"> -->
 	<title>Howdy FED2223</title>
-	
+
 	<link href="styles/algemeen.css" rel="stylesheet">
 	<link href="styles/allproducts.css" rel="stylesheet">
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-	
+
 </head>
 
 <body>
-    <a href="#main"><p>skip to content</p></a>
+	<a href="#main">
+		<p>skip to content</p>
+	</a>
 	<header>
 		<div>
 			<a href="">
 				<img src="images/LTT_Logo.png" alt="Logo of Linus Tech Tips" href="index.html">
 			</a>
-			
+
 			<!-- Hamburger menu bars-->
 			<button>
 				<!-- <img src="images/icons/bars-solid.svg"> -->
 				<picture>
-					<source srcset="images/icons/bars-solid-darkmode.png" media="(prefers-color-scheme: dark)" alt="Hamburger menu">
+					<source srcset="images/icons/bars-solid-darkmode.png" media="(prefers-color-scheme: dark)"
+						alt="Hamburger menu">
 					<img src="images/icons/bars-solid.svg" alt="Hamburger menu">
-				  </picture>
+				</picture>
 			</button>
-			
+
 			<!-- Icons nav -->
 			<nav>
 				<ul>
 					<!-- <li><button><img src="images/icons/sun-regular.svg" alt="Change to darkmode"></button></li> -->
 					<li>
 						<button>
-						<picture>
-							<source srcset="images/icons/sun-regular-darkmode.png" media="(prefers-color-scheme: dark)" alt="Change to darkmode">
-							<img src="images/icons/moon-solid.svg" alt="Change to light-mode">
-						  </picture>
-						  </button>
-					</li>
-					 <li><button><!--<img src="images/icons/magnifying-glass-solid.svg" alt="Search products"> -->
-						<picture>
-							<source srcset="images/icons/magnifying-glass-darkmode.png" media="(prefers-color-scheme: dark)" alt="Search for products">
-							<img src="images/icons/magnifying-glass-solid.svg" alt="Search for products">
-						  </picture>
-					</button></li>
-					<li>
-						<button><!-- <img src="images/icons/cart-shopping-solid.svg" alt="Go to shopping cart"> -->
 							<picture>
-								<source srcset="images/icons/cart-shopping-darkmode.png" media="(prefers-color-scheme: dark)" alt="Shopping cart">
+								<source srcset="images/icons/sun-regular-darkmode.png"
+									media="(prefers-color-scheme: dark)" alt="Change to darkmode">
+								<img src="images/icons/moon-solid.svg" alt="Change to light-mode">
+							</picture>
+						</button>
+					</li>
+					<li><button>
+							<!--<img src="images/icons/magnifying-glass-solid.svg" alt="Search products"> -->
+							<picture>
+								<source srcset="images/icons/magnifying-glass-darkmode.png"
+									media="(prefers-color-scheme: dark)" alt="Search for products">
+								<img src="images/icons/magnifying-glass-solid.svg" alt="Search for products">
+							</picture>
+						</button></li>
+					<li>
+						<button>
+							<!-- <img src="images/icons/cart-shopping-solid.svg" alt="Go to shopping cart"> -->
+							<picture>
+								<source srcset="images/icons/cart-shopping-darkmode.png"
+									media="(prefers-color-scheme: dark)" alt="Shopping cart">
 								<img src="images/icons/cart-shopping-solid.svg" alt="Shopping cart">
-							  </picture>
-					</button>
-				</li>
+							</picture>
+						</button>
+					</li>
 				</ul>
 			</nav>
 
 			<!-- Warning Text -->
 			<section>
 				<p>
-					Due to an extremely high volume of requests, replies from our customer service may be delayed. 
+					Due to an extremely high volume of requests, replies from our customer service may be delayed.
 					We appreciate your patience
 				</p>
 			</section>
@@ -77,19 +85,68 @@
 			<li>Clothing</li>
 			<li>All Products</li>
 		</ul>
-		
+
 	</header>
 
-    <main>
-        <button>Filter and sort</button>
-        <p>xx Products</p>
-		<section>
+	<main>
 		<ul>
-			<li id="product1"><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="ABC Book Character Plush" />
-				<h3>ABC Book Character Plush</h3><p>$39.99 USD</p></li>
-				<li id="product1"><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" />
-					<h3>retro polar fleece</h3><p>$39.99 USD</p></li>
+			<li>
+				availability
+			</li>
+			<li>
+				price
+			</li>
+			<li>
+				color
+			</li>
+			<li>
+				size
+			</li>
+			<li>
+				wait size
+			</li>
+			<li>
+				sort by
+				<label>
+					<input list="sortby" id="sort" name="sort" />
+				</label>
+				<datalist id="sortby">
+					<option value="alphabetically A-Z">
+					<option value="alphabetically Z-A">
+				</datalist>
+				<!-- https://stackoverflow.com/questions/43820558/how-to-style-a-list-input -->
+			</li>
+			<li>
+				<button>
+					<p>Apply</p>
+				</button>
+			</li>
 		</ul>
+
+		<section>
+			<button>
+				<picture>
+					<source srcset="images/icons/filter-solid-darkmode.png" media="(prefers-color-scheme: dark)"
+						alt="Change to darkmode">
+					<img src="images/icons/filter-solid.svg" alt="Change to light-mode">
+				</picture>
+				Filter and sort
+			</button>
+			<p>xx Products</p>
+		</section>
+
+		<section>
+			<ul>
+				<li><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp"
+						alt="ABC Book Character Plush" />
+					<h3>ABC Book Character Plush</h3>
+					<p>$39.99 USD</p>
+				</li>
+				<li><img src="images/ltt_products/lttstore_Fleece_TransparencyFile.webp" alt="Retro Polus Fleece" />
+					<h3>retro polar fleece</h3>
+					<p>$39.99 USD</p>
+				</li>
+			</ul>
 		</section>
 
 	</main>
@@ -120,7 +177,8 @@
 		<p>Powered by shopify</p>
 	</footer>
 
-	<script defer src="scripts/script.js"></script>
+	<script defer src="scripts/algemeen.js"></script>
+	<script defer src="scripts/allproducts.js"></script>
 </body>
-	
+
 </html>
